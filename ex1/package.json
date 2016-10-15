@@ -7,5 +7,8 @@
     "start": "webpack-dev-server"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "redux": "^3.6.0"
+  }
 }
