@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {getRandomImage} from '../redux/action/index.js';
 
 class RandomImages extends React.Component{
   constructor(props){
@@ -24,4 +26,21 @@ function ImageList(props){
   );
 }
 
-export default RandomImages;
+const mapStateToProps = (state, ownProps) =>{
+  return{
+    images: state.images
+  }
+}
+
+const mapDispatchToProps = (dispatch, ownProps) =>{
+  return{
+    onRandomImages: () => dispatch(getRandomImage)
+  }
+}
+
+const RandomImagesContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RandomImages)
+
+export default RandomImagesContainer
