@@ -1,10 +1,14 @@
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware, compose} from 'redux';
+import createLogger from 'redux-logger';
+import thunk from 'redux-thunk';
 import combineReducer from '../reducer/index.js';
-import {logger, crashReporter, thunk} from '../middleware/index.js';
+import {crashReporter} from '../middleware/index.js';
 
 const store = createStore(
   combineReducer,
-  applyMiddleware(logger, crashReporter, thunk)
+  compose(
+    applyMiddleware(crashReporter, thunk, createLogger())
+  )
 );
 
 export default store;

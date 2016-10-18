@@ -17,17 +17,16 @@ class Counter extends React.Component{
   }
 }
 
-const mapStateToProps = (state, ownProps) =>{
-  return{
-    count: state.count
-  }
-}
+const mapStateToProps = (state, ownProps) =>({
+  count: state.count
+});
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return{
     onDecrement: () => dispatch(decrement())
   }
 }
+
 const CounterContainer = connect(
   mapStateToProps,
   mapDispatchToProps

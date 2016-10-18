@@ -23,11 +23,9 @@ class Sum extends React.Component{
   }
 }
 
-const mapStateToProps = (state, ownProps) =>{
-  return{
-    sum: state.sum
-  }
-}
+const mapStateToProps = (state, ownProps) =>({
+  sum: state.sum
+});
 
 const mapDispatchToProps = (dispatch, ownProps) =>{
   return{

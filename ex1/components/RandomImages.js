@@ -26,11 +26,9 @@ function ImageList(props){
   );
 }
 
-const mapStateToProps = (state, ownProps) =>{
-  return{
-    images: state.images
-  }
-}
+const mapStateToProps = (state, ownProps) =>({
+  images: state.images
+});
 
 const mapDispatchToProps = (dispatch, ownProps) =>{
   return{
