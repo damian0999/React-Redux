@@ -1,7 +1,7 @@
 import React from 'react';
-import Counter from './Counter.js'
-import Sum from './Sum.js'
-import RandomImages from './RandomImages.js'
+import Counter from '../containers/Counter.js'
+import Sum from '../containers/Sum.js'
+import RandomImages from '../containers/RandomImages.js'
 
 class Example extends React.Component{
   constructor(props){
