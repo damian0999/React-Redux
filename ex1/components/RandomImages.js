@@ -5,11 +5,12 @@ class RandomImages extends React.Component{
     super(props);
   }
   render(){
+    const {images:{loading, data}, onRandomImages} = this.props;
     return(
       <div>
-        <button type='button' onClick={this.props.onRandomImages}>Random Images</button>
-        Status: <span style={{color: 'blue'}}>{this.props.images.loading}</span>
-      <ImageList images={this.props.images.data}/>
+        <button type='button' onClick={onRandomImages}>Random Images</button>
+        Status: <span style={{color: 'blue'}}>{loading}</span>
+      <ImageList images={data}/>
       </div>
     );
   }

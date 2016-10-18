@@ -13,11 +13,12 @@ class Sum extends React.Component{
     this.props.onSum(this.state.a, this.state.b);
   }
   render(){
+    const {state: {a,b}, props: {sum}} = this;
     return(
       <div>
-        <input type='text' value={this.state.a} onChange={(e) => this.setState({a: e.target.value})}/>
-        + <input type='text' value={this.state.b} onChange={(e) => this.setState({b: e.target.value})}/>
-      = <span>{this.props.sum}</span>
+        <input type='text' value={a} onChange={(e) => this.setState({a: e.target.value})}/>
+        + <input type='text' value={b} onChange={(e) => this.setState({b: e.target.value})}/>
+      = <span>{sum}</span>
         <button type='button' onClick={this.sum}>Sum</button>
       </div>
     );

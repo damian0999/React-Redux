@@ -8,17 +8,18 @@ class Example extends React.Component{
     super(props);
   }
   render(){
+    const {value:{count, sum, images}, onDecrement, onSum, onRandomImages} = this.props;
     return(
       <div>
         <h1 style={{color: 'red'}}>React</h1>
-        <Counter count={this.props.value.count}
-          onDecrement={this.props.onDecrement}/>
+        <Counter count={count}
+          onDecrement={onDecrement}/>
         <hr/>
-        <Sum sum={this.props.value.sum}
-          onSum={this.props.onSum}/>
+        <Sum sum={sum}
+          onSum={onSum}/>
         <hr />
-        <RandomImages images={this.props.value.images}
-          onRandomImages={this.props.onRandomImages}/>
+        <RandomImages images={images}
+          onRandomImages={onRandomImages}/>
       </div>
     );
   }
