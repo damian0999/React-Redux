@@ -1,4 +1,5 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
 import counter from './counter'
 import sum from './sum'
 import images from './images'
@@ -6,5 +7,6 @@ import images from './images'
 export default combineReducers({
     count: counter,
     sum: sum,
-    images: images
+    images: images,
+    routing: routerReducer
 });
